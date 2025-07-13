@@ -3,8 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { openSans } from "@/fonts/fonts";
 import { Suspense } from "react";
-import Loading from "@/components/Others/Loading";
 import { Toaster } from "sonner";
+import Loading from "@/components/others/Loading";
+import ReduxProvider from "@/redux/Provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={openSans.variable}
-      >
-        <Toaster position="top-center" expand={true} richColors />
-        <Suspense fallback={<Loading />}>
-          {children}
-        </Suspense>
+      <body suppressHydrationWarning={true} className={openSans.variable}>
+        <ReduxProvider>
+          <Toaster position="top-center" expand={true} richColors />
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </ReduxProvider>
       </body>
     </html>
   );
