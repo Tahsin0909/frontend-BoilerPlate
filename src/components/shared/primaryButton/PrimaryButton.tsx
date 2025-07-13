@@ -7,11 +7,13 @@ const PrimaryButton = ({
   onClick,
   children,
   loading = false,
+  type,
 }: {
   text?: string;
   loading?: boolean;
-  onClick: any;
+  onClick?: any;
   children?: React.ReactNode;
+  type?: "button" | "submit" | "reset";
 }) => {
   return children ? (
     <div
@@ -22,10 +24,10 @@ const PrimaryButton = ({
     </div>
   ) : (
     <button
-      type="submit"
+      type={type}
       disabled={loading}
       onClick={onClick}
-      className="px-3 py-2 text-center rounded-full bg-primary/80 transition-all duration-300 text-white hover:bg-primary shadow cursor-pointer"
+      className="px-3 py-2 w-full text-center rounded-full bg-primary/80 transition-all duration-300 text-white hover:bg-primary shadow cursor-pointer"
     >
       <div className={`flex items-center justify-center gap-2`}>
         <LuLoader

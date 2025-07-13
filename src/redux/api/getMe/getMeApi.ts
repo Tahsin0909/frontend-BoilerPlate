@@ -6,7 +6,7 @@ export const getMe = baseApi.injectEndpoints({
     // need to add types
     getMe: builder.query({
       query: () => "/user/get-me",
-      providesTags: ["UserProfile"],
+      providesTags: ["User"],
     }),
   }),
 });

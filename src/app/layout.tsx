@@ -4,8 +4,8 @@ import "./globals.css";
 import { openSans } from "@/fonts/fonts";
 import { Suspense } from "react";
 import { Toaster } from "sonner";
-import Loading from "@/components/others/Loading";
 import ReduxProvider from "@/redux/Provider";
+import Loading from "@/components/Others/Loading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

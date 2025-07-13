@@ -6,12 +6,12 @@ body {
 }
 
 @theme {
-  --color-primary: var(#CFF8F1);
-  --color-secondary: var(#168B86);
-  --color-accent: var(#E5E5FF);
-  --color-surface: var(#FFEDE2);
-  --color-card: var(#E5E5FF);
-  --color-warning: var(#EB3C13);
-  --color-success: var(#10B981);
-  --color-info: var(#3B82F6);
+  --color-primary: #168B86;
+  --color-secondary: #168B86;
+  --color-accent: #E5E5FF;
+  --color-surface: #FFEDE2;
+  --color-card: #E5E5FF;
+  --color-warning: #EB3C13;
+  --color-success: #10B981;
+  --color-info: #3B82F6;
 }

@@ -15,7 +15,7 @@ export const baseApi = createApi({
     },
   }),
   endpoints: () => ({}),
-  tagTypes: ["UserProfile"],
+  tagTypes: ["User"],
 });
 
 // Export hooks for usage in functional components
