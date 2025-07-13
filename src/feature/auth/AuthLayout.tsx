@@ -25,7 +25,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({
           </div>
         </div>
       ) : (
-        <div className="w-full max-w-md">{children}</div>
+        <div className="w-full px-0 max-w-md">{children}</div>
       )}
     </div>
   );
